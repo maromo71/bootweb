@@ -47,10 +47,7 @@ cd seu-repositorio
 
 Certifique-se de que o MySQL esteja instalado e em execução. Crie um banco de dados para a aplicação:
 
-CREATE DATABASE minha_aplicacao;  
-CREATE USER 'meu_usuario'@'localhost' IDENTIFIED BY 'minha_senha';  
-GRANT ALL PRIVILEGES ON minha_aplicacao.* TO 'meu_usuario'@'localhost';  
-FLUSH PRIVILEGES;
+CREATE DATABASE minha_aplicacao;
 
 Configure o `persistence.xml` ou `datasource` no projeto para que a aplicação se conecte ao banco de dados MySQL.
 
@@ -102,7 +99,8 @@ Exemplo de configuração no `pom.xml` para o Jetty:
 
 Com todas as dependências configuradas, você pode executar a aplicação localmente com o comando Maven:
 
-mvn clean compile jetty:run
+mvn clean package
+mvn jetty:run
 
 A aplicação estará disponível no navegador em [http://localhost:8080](http://localhost:8080).
 
