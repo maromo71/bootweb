@@ -1,0 +1,3 @@
+com\example\model\App.class
+com\example\dao\AppDao.class
+com\example\controller\AppControler.class
